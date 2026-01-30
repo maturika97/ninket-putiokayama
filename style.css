@@ -1,0 +1,463 @@
+:root {
+    --primary-color: #F4A261;
+    /* Orange */
+    --primary-light: #f7bb8a;
+    --accent-color: #264653;
+    /* Dark Slate Blue (Contrast) */
+    --text-color: #2c3e50;
+    --bg-color: #FDFCF6;
+    /* Cream */
+    --white: #FFFFFF;
+    --cta-bg: #2d6a9f;
+    /* Blue for CTA section based on reference */
+}
+
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utilities */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-orange {
+    color: var(--primary-color);
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.site-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.site-header .logo {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-right: auto;
+    padding-left: 2rem;
+}
+
+.site-header nav {
+    padding-right: 2rem;
+}
+
+.site-header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Hero */
+.hero {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.hero-visual-wrapper {
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.main-visual-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 550px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.main-visual-img:hover {
+    transform: scale(1.02);
+}
+
+.hero-date {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0.8rem 2.5rem;
+    /* Larger padding */
+    border-radius: 50px;
+    font-size: 1.5rem;
+    /* Larger font */
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.hero-lead {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Message Section */
+.message-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.message-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.message-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Visual Section (Participants) */
+.visual-section {
+    padding: 2rem 0 4rem;
+    text-align: center;
+}
+
+.visual-section h2 {
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+}
+
+.image-wrapper img {
+    border-radius: 16px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Info Card (Reference Style) */
+.details-section {
+    padding: 2rem 0;
+    background: #f4f6f8;
+}
+
+.info-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-header {
+    background: var(--accent-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+.info-header h2 {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.info-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+    background: #eff3f6;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.info-content h3 {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.info-content p {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.price-box {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.price-item span {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.price-item strong {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.map-link {
+    display: inline-block;
+    color: var(--cta-bg);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    border-bottom: 1px solid currentColor;
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--cta-bg);
+    color: white;
+    text-align: center;
+    padding: 5rem 1.5rem;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section:before {
+    content: "NINKET";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    transform: rotate(-10deg);
+}
+
+.cta-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.cta-sub {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: var(--cta-bg);
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta-note {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .price-box {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Specific Styles for New Elements */
+.btn-sbt {
+    display: inline-block;
+    background: #FFD700;
+    /* Gold */
+    color: #333;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 800;
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 1.2rem;
+}
+
+.btn-sbt:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: #FFC000;
+}
+
+.circles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.circle-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.circle-img:hover {
+    transform: scale(1.03);
+}
+
+.cta-button-small {
+    display: inline-block;
+    background: var(--cta-bg);
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(45, 106, 159, 0.3);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.staff-section {
+    padding: 4rem 0;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.staff-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.staff-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Circle icons */
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+}
+
+.staff-item {
+    transition: transform 0.2s;
+}
+
+.staff-item:hover {
+    transform: translateY(-5px);
+}
+
+.staff-name {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.staff-role {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .circles-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
