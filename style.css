@@ -275,6 +275,160 @@ a {
     border-bottom: 1px solid currentColor;
 }
 
+/* Sponsor Section */
+.sponsor-section {
+    margin-bottom: 3rem;
+    padding: 2.5rem 1.5rem;
+    background: linear-gradient(135deg, #fffbf0, #fff8e7, #fef5e0);
+    border-radius: 24px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+    text-align: center;
+}
+
+.sponsor-title {
+    color: #b8860b;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.sponsor-images {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.sponsor-img-wrapper {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.sponsor-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-logo {
+    background: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    border: 2px solid #e8e8e8;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.3);
+    border-color: #d4af37;
+}
+
+.sponsor-link-note {
+    font-size: 0.8rem;
+    color: #b8860b;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.sponsor-thanks {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.sponsor-thanks strong {
+    color: #b8860b;
+    font-size: 1.05rem;
+}
+
+/* Closed Banner */
+.closed-banner {
+    background: linear-gradient(135deg, #fff5f5, #fff0e6, #fef9e7);
+    border: 2px solid #F4A261;
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    position: relative;
+    animation: pulse-border 2s ease-in-out infinite;
+}
+
+.closed-banner-large {
+    padding: 2.5rem 3rem;
+    border-radius: 24px;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.closed-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+.closed-main {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #e74c3c;
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+}
+
+.closed-banner-large .closed-main {
+    font-size: 1.6rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.closed-banner-large .closed-icon {
+    font-size: 3rem;
+}
+
+.closed-sub {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.closed-banner-large .closed-sub {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulse-border {
+
+    0%,
+    100% {
+        border-color: #F4A261;
+        box-shadow: 0 0 0 0 rgba(244, 162, 97, 0.3);
+    }
+
+    50% {
+        border-color: #e74c3c;
+        box-shadow: 0 0 15px 3px rgba(231, 76, 60, 0.15);
+    }
+}
+
 /* CTA Section */
 .cta-section {
     background: var(--cta-bg);
